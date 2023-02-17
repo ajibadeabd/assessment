@@ -21,7 +21,6 @@ class CommentModel {
     }
     create(data) {
         return __awaiter(this, void 0, void 0, function* () {
-            console.log(data);
             return this.commentModel.create(data);
         });
     }

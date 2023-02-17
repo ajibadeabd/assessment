@@ -1,6 +1,6 @@
 {
   "files.exclude": {
-    "**/node_modules/": trcue
+    "**/node_modules/": true
   },
   "editor.formatOnPaste": true,
   "editor.formatOnSave": true,

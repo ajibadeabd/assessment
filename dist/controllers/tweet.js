@@ -17,7 +17,6 @@ class TweetController {
         this.createTweet = (req, res) => __awaiter(this, void 0, void 0, function* () {
             const { content } = req.body;
             const user = req.user;
-            // console.log(user);
             try {
                 const tweet = yield this.tweetModel.create({
                     content,

@@ -31,20 +31,4 @@ if (userModel.associate) {
 if (commentModel.associate) {
     commentModel.associate(db);
 }
-// let db = {
-//   [UserModel.name]: UserModel,
-//   [TweetModel.name]: TweetModel,
-// };
-// Object.keys(db).forEach((modelName) => {
-//   if (db[modelName].associate) {
-//     db[modelName].associate(db);
-//   }
-// });
-// // let
-// // let { User: s, Tweet: s } = db;
-// // console.log(db.Tweet, "Tee", db.User);
-// // let userModel: typeof User = db.User;
-// // let tweetModel = db.Tweet;
-// let { User: userModel, Tweet: tweetModel } = db;
-// export { userModel, sequelize, tweetModel };
 //# sourceMappingURL=index.js.map

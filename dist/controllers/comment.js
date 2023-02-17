@@ -18,7 +18,6 @@ class CommentController {
             const { content } = req.body;
             const user = req.user;
             const { tweetId } = req.params;
-            console.log({ tweetId });
             try {
                 const tweet = yield this.tweetModel.findById(tweetId);
                 if (!tweet) {

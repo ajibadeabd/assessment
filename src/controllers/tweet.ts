@@ -12,7 +12,6 @@ class TweetController {
   createTweet = async (req: Request, res: Response) => {
     const { content } = req.body;
     const user = req.user as Users;
-    // console.log(user);
     try {
       const tweet = await this.tweetModel.create({
         content,

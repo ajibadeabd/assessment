@@ -14,8 +14,6 @@ class CommentModel {
   }
 
   async create(data: {}): Promise<any> {
-    console.log(data);
-
     return this.commentModel.create(data);
   }
 }

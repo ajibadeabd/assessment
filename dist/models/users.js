@@ -41,53 +41,10 @@ exports.UUID = {
     defaultValue: uuid_1.v4,
     allowNull: false,
 };
-// class User extends Model {
-//   /**
-//    * Helper method for defining associations.
-//    * This method is not a part of Sequelize lifecycle.
-//    * The `models/index` file will call this method automatically.
-//    */
-//   public id!: string;
-//   public name!: string;
-//   public email!: string;
-//   public password!: string;
-//   public date_created!: Date;
-//   static associate(models: any) {
-//     // define association here
-//     console.log({ models });
-//     User.hasMany(models.Tweet, {
-//       foreignKey: "userId",
-//       // as: "user",
-//     });
-//   }
-// }
-// export { User };
 exports.default = (sequelize, DataTypes) => {
-    // class Users extends Model {
-    //   /**
-    //    * Helper method for defining associations.
-    //    * This method is not a part of Sequelize lifecycle.
-    //    * The `models/index` file will call this method automatically.
-    //    */
-    //   public userId!: string;
-    //   public name!: string;
-    //   public email!: string;
-    //   public password!: string;
-    //   public date_created!: Date;
-    //   public create = () => {};
-    // static associate(models: any) {
-    //   // define association here
-    //   console.log({ models });
-    //   // Users.hasMany(models.Tweet, {
-    //   //   foreignKey: "userId",
-    //   //   as: "user",
-    //   // });
-    // }
-    // }
     class User extends sequelize_1.Model {
         static associate(models) {
             // define association here
-            console.log({ models });
             User.hasMany(models.Tweet, {
                 foreignKey: "userId",
                 as: "user",

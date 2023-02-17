@@ -22,7 +22,6 @@ class CommentController {
     const { content } = req.body;
     const user = req.user as Users;
     const { tweetId } = req.params;
-    console.log({ tweetId });
     try {
       const tweet = await this.tweetModel.findById(tweetId);
       if (!tweet) {
