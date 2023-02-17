@@ -1,5 +1,5 @@
 import { Request, Response } from "express";
-import { tweetModel, Users, userModel } from "../utils/databaseFactory";
+import { tweetModel, Users, userModel } from "../databaseFactory";
 
 class TweetController {
   private tweetModel;

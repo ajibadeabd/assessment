@@ -1,5 +1,5 @@
 import { Model } from "sequelize";
-import { commentModel as Comment } from "../../models";
+import { commentModel as Comment } from "../models";
 
 export class Comments extends Model {
   public userId!: string;

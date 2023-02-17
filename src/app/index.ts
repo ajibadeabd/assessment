@@ -2,12 +2,11 @@ import express, { Request, Response, NextFunction } from "express";
 import cors from "cors";
 import YAML from "yamljs";
 import swaggerUi from "swagger-ui-express";
-import { sequelize } from "./models/index";
+import { sequelize } from "../models/index";
 
-// const db = re
-import routers from "./routes";
+import routers from "../routes";
 
-const swaggerDocument = YAML.load("./swagger.yaml");
+const swaggerDocument = YAML.load("swagger.yaml");
 
 const app = express();
 const port = process.env.PORT || 3000;
@@ -21,13 +20,14 @@ app.use((err: any, req: Request, res: Response, next: NextFunction) => {
   }
   next();
 });
+// import all routers
+routers(app);
+
+
 
 // Add middleware to serve the Swagger docs
 
-app.get("/", swaggerUi.serve, swaggerUi.setup(swaggerDocument));
-
-// import all routers
-routers(app);
+app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 
 // Start the server
 app.listen(port, async () => {

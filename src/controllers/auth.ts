@@ -1,7 +1,7 @@
 import { Request, Response } from "express";
-import { userModel } from "../utils/databaseFactory/user.database.factory";
+import { userModel } from "../databaseFactory/user.database.factory";
 import * as bcrypt from "bcrypt";
-import { jwtService } from "../utils/token";
+import { jwtService } from "../auth/token";
 class AuthController {
   private userModel;
 
@@ -12,8 +12,8 @@ class AuthController {
 
   // Route handler for creating a new user.
   createUser = async (req: Request, res: Response) => {
-    const {  email, password } = req.body;
-    let name = email.split("@")[0]
+    const { email, password } = req.body;
+    let name = email.split("@")[0];
     try {
       const user = await this.userModel.findOne({ email });
       if (user) {
@@ -45,7 +45,7 @@ class AuthController {
 
       return res.status(200).json({
         token: jwtService.generate({ userId: user.id }),
-        user: { email,  userId:user.id },
+        user: { email, userId: user.id },
       });
     } catch (error: any) {
       return res.status(400).json({ message: error.message });

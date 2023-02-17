@@ -1,9 +1,5 @@
 import { Request, Response } from "express";
-import {
-  tweetModel,
-  Users,
-  commentModel,
-} from "../utils/databaseFactory";
+import { tweetModel, Users, commentModel } from "../databaseFactory";
 
 class CommentController {
   private tweetModel;

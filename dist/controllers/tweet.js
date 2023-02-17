@@ -10,7 +10,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.tweetController = void 0;
-const databaseFactory_1 = require("../utils/databaseFactory");
+const databaseFactory_1 = require("../databaseFactory");
 class TweetController {
     constructor(Model) {
         // Route handler for creating a new tweet.

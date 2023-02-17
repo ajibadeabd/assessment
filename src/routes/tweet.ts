@@ -1,7 +1,7 @@
 import { Router } from "express"; // Express router
 import { ValidatorFactories, validatorRule } from "../utils"; // Custom validation middleware functions
 import { tweetController } from "../controllers/tweet"; // Controller functions for handling product-related logic
-import { authenticateUser } from "../utils/passport";
+import { authenticateUser } from "../auth/passport";
 
 export default (tweetRouter: Router) => {
   return tweetRouter
@@ -19,5 +19,5 @@ export default (tweetRouter: Router) => {
       validatorRule,
       tweetController.createTweet
     )
-    .get("/all", tweetController.getAllTweet);
+    .get("/all", authenticateUser, tweetController.getAllTweet);
 };

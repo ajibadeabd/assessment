@@ -4,8 +4,9 @@
   "private": true,
   "description": "A simple user tweet API built with Node.js, Express",
   "scripts": {
-    "start": "node  -r dotenv/config dist/index.js",
-    "start:dev": "nodemon  -r dotenv/config src/index.ts",
+    "start": "node  -r dotenv/config dist/app/index.js",
+    "prestart":"tsc",
+    "start:dev": "nodemon  -r dotenv/config src/app/index.ts",
     "build": "rimraf dist && tsc",
     "ts.check": "tsc --project tsconfig.json",
     "add-build": "git add dist"

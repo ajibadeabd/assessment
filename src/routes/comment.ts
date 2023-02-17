@@ -1,7 +1,7 @@
 import { Router } from "express"; // Express router
 import { ValidatorFactories, validatorRule } from "../utils"; // Custom validation middleware functions
 import { commentController } from "../controllers/comment"; // Controller functions for handling product-related logic
-import { authenticateUser } from "../utils/passport";
+import { authenticateUser } from "../auth/passport";
 
 export default (commentRouter: Router) => {
   return commentRouter.post(
@@ -12,3 +12,5 @@ export default (commentRouter: Router) => {
     commentController.createComment
   );
 };
+
+ 

@@ -33,9 +33,9 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.authController = void 0;
-const user_database_factory_1 = require("../utils/databaseFactory/user.database.factory");
+const user_database_factory_1 = require("../databaseFactory/user.database.factory");
 const bcrypt = __importStar(require("bcrypt"));
-const token_1 = require("../utils/token");
+const token_1 = require("../auth/token");
 class AuthController {
     constructor(Model) {
         // Route handler for creating a new user.

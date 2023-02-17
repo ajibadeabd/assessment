@@ -3,7 +3,7 @@ import {
   tweetModel as Tweet,
   userModel as User,
   commentModel as Comment,
-} from "../../models";
+} from "../models";
 
 export class Tweets extends Model {
   public userId!: string;

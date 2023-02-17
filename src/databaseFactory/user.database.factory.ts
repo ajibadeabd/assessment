@@ -1,5 +1,5 @@
 import { FindAttributeOptions, Model } from "sequelize";
-import { userModel as User } from "../../models";
+import { userModel as User } from "../models";
 export class Users extends Model {
   public id!: string;
   public name!: string;
