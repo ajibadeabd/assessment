@@ -1,6 +1,6 @@
 {
   "files.exclude": {
-    "**/node_modules/": truen
+    "**/node_modules/": trcue
   },
   "editor.formatOnPaste": true,
   "editor.formatOnSave": true,
@@ -8,7 +8,7 @@
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": true,
     "source.fixAll.format": true
-  },
+  }, 
   "[typescriptreact]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
