@@ -15,7 +15,6 @@ let db = {
   [commentModel.name]: commentModel,
 };
 
-
 if (tweetModel.associate) {
   tweetModel.associate(db);
 }
@@ -27,4 +26,3 @@ if (commentModel.associate) {
 }
 
 export { userModel, sequelize, tweetModel, commentModel };
- 

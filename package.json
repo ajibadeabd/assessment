@@ -5,7 +5,7 @@
   "description": "A simple user tweet API built with Node.js, Express",
   "scripts": {
     "start": "node  -r dotenv/config dist/app/index.js",
-    "prestart":"tsc",
+    "prestart":"npm run build",
     "start:dev": "nodemon  -r dotenv/config src/app/index.ts",
     "build": "rimraf dist && tsc",
     "ts.check": "tsc --project tsconfig.json",
